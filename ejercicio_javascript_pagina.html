@@ -2,27 +2,25 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
-    <audio src="C:\Users\Public\Music\Sample Music\Kalimba.mp3" controls>
-  Tu navegador no soporta el elemento <code>audio</code>.
-</audio>
+    <title>Escucha la música</title>
+    <script>
+
+        function play(){
+
+          var audio = document.getElementById("audio");
+            audio.loop=true;
+            audio.play();
+          }
+
+        function pause(){
+          audio.pause();
+        }
+
+    </script>
   </head>
   <body>
-    <button id="boton">Play</button>
-    <script type="text/javascript">
 
-    boton.addEventListener("click", function(){
-      if (!sound) {
-        v.play();
-        this.innerHTML = "Pause";
-        sound = true;
-      }  else {
-        v.pause();
-        this.innerHTML = "Play";
-        sound = false;
-      }
-    });
-  </script>
-
+    <audio controls id="audio" src="C:\Users\Public\Music\Sample Music\Kalimba.mp3" type="audio/mp3"></audio>
+    <button onclick="pause()">Pause</button>
   </body>
 </html>
