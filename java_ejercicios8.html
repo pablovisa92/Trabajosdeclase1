@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <script>
+
+      function convertir(){
+  var euros = document.getElementById("euros").value;
+  euros = euros*1.23;
+  var dolares= document.getElementById("dolares").value;
+  dolares=dolares/1.23;
+  document.getElementById("dolares").value = euros;
+  document.getElementById("euros").value = dolares;
+ }
+</script>
+  </head>
+  <body>
+	 <form>
+ Euros: <input id="euros" type="text"><br>
+ Dolares: <input id="dolares" type="text"><br>
+ <input value="Convertir" onclick="convertir()" type="button">
+
+  </body>
+    </html>

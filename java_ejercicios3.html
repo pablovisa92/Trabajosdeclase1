@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+      var n1,n2,signo,resultado;
+      n1=prompt('Ingrese el primer numero:','');
+      n2=prompt('Ingrese el segundo numero:','');
+      signo=prompt("Introduce la operacion(+ - * /)");
+
+      if(signo=="+"){
+          resultado=n1+n2;
+        }else if(signo=="-"){
+          if(n1>n2){
+            resultado=n1-n2;
+          } else{
+            resultado=n2-n1;
+          }
+        }else if(signo=="*"){
+          resultado=n1*n2;
+        }else if(signo=="/"){
+          if(n1>n2){
+            resultado=n1/n2;
+          }else{
+            resultado=n2/n1;
+          }
+        }
+
+          document.write('El resultado es: ');
+          document.write(parseInt(resultado));
+    </script>
+  </body>
+</html>

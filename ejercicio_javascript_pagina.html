@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <audio src="C:\Users\Public\Music\Sample Music\Kalimba.mp3" controls>
+  Tu navegador no soporta el elemento <code>audio</code>.
+</audio>
+  </head>
+  <body>
+    <button id="boton">Play</button>
+    <script type="text/javascript">
+
+    boton.addEventListener("click", function(){
+      if (!sound) {
+        v.play();
+        this.innerHTML = "Pause";
+        sound = true;
+      }  else {
+        v.pause();
+        this.innerHTML = "Play";
+        sound = false;
+      }
+    });
+  </script>
+
+  </body>
+</html>
