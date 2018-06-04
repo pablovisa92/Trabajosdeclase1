@@ -1,20 +1,31 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <script>
-    function convertir(){
-      var noches= document.getElementbyId("noches").value;
-      noches=noches*140;
-      document.getElementbyId("noches_hotel").value = noches;
-    }
-    </script>
-  </head>
-  <body>
-    <form>
-    Introduce el numero de noches:<input id="noches" type="text">
-    <Input value="Calcular coste" onclick="convertir()" type="button"><br>
-      Precio hotel: <input id="noches_hotel" type="text" disabled = disabled><br>
-  </body>
+<html lang="en">
+<head>
+
+	<script>
+function coste_hotel(numNoches){
+	var resultado = 140*numNoches;
+	return resultado;
+}
+function calcular_coste(){
+	var numNoches = document.getElementById("numNoches").value;
+	var resultado = coste_hotel(numNoches);
+
+	document.getElementById("resultado").value = resultado;
+}
+
+</script>
+
+</head>
+<body>
+
+
+<label>Introduzca el número de noches</label>
+<input id="numNoches" type="text">
+<input onclick="calcular_coste()" value="calcular coste" type="button">
+<br><br>
+<label>Coste total del hotel</label>
+<input id="resultado" type="text">
+
+</body>
 </html>
